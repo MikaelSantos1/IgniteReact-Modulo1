@@ -32,9 +32,9 @@ module.exports={
                 exclude:/node_modules/,
                 use:{
                   loader: 'babel-loader',
-                  options:[
-                    isDevolopment && require.resolve('react-refresh/babel')
-                  ].filter(Boolean)
+                  options:{
+                   plugins:[ isDevolopment && require.resolve('react-refresh/babel')].filter(Boolean)
+                  }
 
                   
                 }
