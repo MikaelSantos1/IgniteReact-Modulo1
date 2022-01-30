@@ -12,7 +12,7 @@ export function RepostoryList (){
     useEffect(()=>{
         fetch('https://api.github.com/users/MikaelSantos1/repos')
         .then(response=>response.json())
-        .then(data=>console.log(data))
+        .then(data=>setRepositories(data))
     },[])
     return(
         <section className="repository-list">
